@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f1e4" />
+    <meta
+      name="description"
+      content="A lovingly designed digital Nikah invitation for Zunera and Maaz."
+    />
+    <title>Zunera & Maaz — Nikah Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="is-locked">
+    <!-- ======================================================
+         Shared floral artwork (used everywhere via <use href="#…">)
+         Colours come from CSS variables in styles.css (:root).
+         ====================================================== -->
+    <svg class="svg-sprite" aria-hidden="true" focusable="false">
+      <defs>
+        <path id="lf" d="M0 0C5-5.5 13-5.5 18 0C13 5.5 5 5.5 0 0Z" />
+        <path id="bd" d="M0 0C-3.4-4-3.4-9 0-12.5C3.4-9 3.4-4 0 0Z" />
+        <g id="bl">
+          <ellipse cx="0" cy="-6" rx="4" ry="6.4" />
+          <ellipse cx="0" cy="-6" rx="4" ry="6.4" transform="rotate(72)" />
+          <ellipse cx="0" cy="-6" rx="4" ry="6.4" transform="rotate(144)" />
+          <ellipse cx="0" cy="-6" rx="4" ry="6.4" transform="rotate(216)" />
+          <ellipse cx="0" cy="-6" rx="4" ry="6.4" transform="rotate(288)" />
+          <circle r="2.7" style="fill: var(--bloom-center)" />
+        </g>
+
+        <!-- one half of the horizontal divider sprig -->
+        <g id="sprig-half">
+          <path
+            d="M128 22C144 14 160 30 180 22S212 13 228 19"
+            style="fill: none; stroke: var(--stem); stroke-width: 1.1"
+          />
+          <use
+            href="#lf"
+            transform="translate(140 18) rotate(-38)"
+            style="fill: var(--leaf)"
+          />
+          <use
+            href="#lf"
+            transform="translate(154 25) rotate(28) scale(.9)"
+            style="fill: var(--leaf)"
+          />
+          <use
+            href="#lf"
+            transform="translate(178 22) rotate(-30) scale(.82)"
+            style="fill: var(--leaf)"
+          />
+          <use
+            href="#lf"
+            transform="translate(196 17) rotate(22) scale(.7)"
+            style="fill: var(--leaf)"
+          />
+          <use
+            href="#bl"
+            transform="translate(206 26) scale(.45)"
+            style="fill: var(--bloom-alt)"
+          />
+          <use
+            href="#bd"
+            transform="translate(228 19) rotate(70) scale(.75)"
+            style="fill: var(--bloom)"
+          />
+          <circle cx="168" cy="16" r="1.5" style="fill: var(--bloom-alt)" />
+        </g>
+      </defs>
+
+      <!-- Horizontal floral sprig: section dividers, card crests -->
+      <symbol id="sprig" viewBox="0 0 240 44">
+        <use href="#sprig-half" />
+        <use href="#sprig-half" transform="matrix(-1 0 0 1 240 0)" />
+        <use
+          href="#lf"
+          transform="translate(120 22) rotate(-62) scale(.8)"
+          style="fill: var(--leaf)"
+        />
+        <use
+          href="#lf"
+          transform="translate(120 22) rotate(-118) scale(.8)"
+          style="fill: var(--leaf)"
+        />
+        <use
+          href="#bl"
+          transform="translate(120 22) scale(1.15)"
+          style="fill: var(--bloom)"
+        />
+      </symbol>
+
+      <!-- Small single bloom -->
+      <symbol id="bloom" viewBox="0 0 24 24">
+        <use
+          href="#bl"
+          transform="translate(12 12)"
+          style="fill: var(--bloom)"
+        />
+      </symbol>
+
+      <!-- Tall climbing vine: side motifs on every section -->
+      <symbol id="vine" viewBox="0 0 120 340">
+        <g
+          style="
+            fill: none;
+            stroke: var(--stem);
+            stroke-width: 1.3;
+            stroke-linecap: round;
+          "
+        >
+          <path
+            d="M18 340C28 300 70 290 60 250S20 190 44 150S92 92 70 52S50 14 64 2"
+          />
+          <path d="M61 252C76 242 90 240 100 228" />
+          <path d="M44 152C30 142 18 141 10 128" />
+          <path d="M71 56C86 50 95 40 98 26" />
+          <path d="M33 205C24 200 18 192 16 182" />
+        </g>
+        <g style="fill: var(--leaf)">
+          <use
+            href="#lf"
+            transform="translate(27 318) rotate(-150) scale(1.1)"
+          />
+          <use
+            href="#lf"
+            transform="translate(35 300) rotate(-20) scale(1.15)"
+          />
+          <use href="#lf" transform="translate(62 272) rotate(-35)" />
+          <use href="#lf" transform="translate(60 262) rotate(200) scale(.9)" />
+          <use
+            href="#lf"
+            transform="translate(80 243) rotate(-75) scale(.85)"
+          />
+          <use href="#lf" transform="translate(88 238) rotate(30) scale(.8)" />
+          <use
+            href="#lf"
+            transform="translate(42 222) rotate(-140) scale(1.05)"
+          />
+          <use
+            href="#lf"
+            transform="translate(36 186) rotate(-20) scale(.95)"
+          />
+          <use
+            href="#lf"
+            transform="translate(26 146) rotate(-120) scale(.85)"
+          />
+          <use
+            href="#lf"
+            transform="translate(20 143) rotate(110) scale(.75)"
+          />
+          <use
+            href="#lf"
+            transform="translate(58 128) rotate(-30) scale(1.05)"
+          />
+          <use
+            href="#lf"
+            transform="translate(72 104) rotate(190) scale(.95)"
+          />
+          <use href="#lf" transform="translate(80 80) rotate(-25) scale(.9)" />
+          <use
+            href="#lf"
+            transform="translate(86 46) rotate(-100) scale(.75)"
+          />
+          <use href="#lf" transform="translate(60 30) rotate(200) scale(.8)" />
+          <use href="#lf" transform="translate(58 22) rotate(-40) scale(.7)" />
+        </g>
+        <use
+          href="#bl"
+          transform="translate(100 226) scale(1.25)"
+          style="fill: var(--bloom)"
+        />
+        <use
+          href="#bl"
+          transform="translate(10 126) scale(1.05)"
+          style="fill: var(--bloom-alt)"
+        />
+        <use
+          href="#bl"
+          transform="translate(98 22) scale(.95)"
+          style="fill: var(--bloom)"
+        />
+        <use
+          href="#bl"
+          transform="translate(45 168) scale(.55)"
+          style="fill: var(--bloom)"
+        />
+        <use
+          href="#bd"
+          transform="translate(16 182) rotate(-15) scale(.8)"
+          style="fill: var(--bloom-alt)"
+        />
+        <use
+          href="#bd"
+          transform="translate(64 2) rotate(20) scale(.7)"
+          style="fill: var(--bloom)"
+        />
+        <g style="fill: var(--bloom-alt)">
+          <circle cx="52" cy="292" r="1.8" />
+          <circle cx="74" cy="196" r="1.6" />
+          <circle cx="30" cy="96" r="1.5" />
+          <circle cx="88" cy="140" r="1.4" />
+        </g>
+      </symbol>
+
+      <!-- Hanging floral garland (toran) -->
+      <pattern
+        id="toranPattern"
+        width="56"
+        height="70"
+        patternUnits="userSpaceOnUse"
+      >
+        <path
+          d="M0 6Q28 34 56 6"
+          style="fill: none; stroke: var(--stem); stroke-width: 1.2"
+        />
+        <path d="M28 20V48" style="stroke: var(--stem); stroke-width: 1" />
+        <use
+          href="#lf"
+          transform="translate(28 27) rotate(140) scale(.6)"
+          style="fill: var(--leaf)"
+        />
+        <use
+          href="#lf"
+          transform="translate(28 27) rotate(40) scale(.6)"
+          style="fill: var(--leaf)"
+        />
+        <use
+          href="#bl"
+          transform="translate(28 20) scale(.55)"
+          style="fill: var(--bloom-alt)"
+        />
+        <use
+          href="#bl"
+          transform="translate(28 53) scale(.8)"
+          style="fill: var(--bloom)"
+        />
+        <use
+          href="#bd"
+          transform="translate(28 62) rotate(180) scale(.55)"
+          style="fill: var(--bloom-alt)"
+        />
+        <use
+          href="#bl"
+          transform="translate(0 7) scale(.6)"
+          style="fill: var(--bloom)"
+        />
+        <use
+          href="#bl"
+          transform="translate(56 7) scale(.6)"
+          style="fill: var(--bloom)"
+        />
+      </pattern>
+    </svg>
+
+    <!-- ======================== OPENING DOORS ======================== -->
+    <div class="curtain-screen" id="curtainScreen">
+      <div class="door door-left" aria-hidden="true">
+        <div class="door-arch"></div>
+        <span class="door-ring"></span>
+      </div>
+      <div class="door door-right" aria-hidden="true">
+        <div class="door-arch"></div>
+        <span class="door-ring"></span>
+      </div>
+
+      <svg class="toran" aria-hidden="true" focusable="false">
+        <rect width="100%" height="100%" fill="url(#toranPattern)" />
+      </svg>
+
+      <div class="curtain-card" role="dialog" aria-label="Wedding invitation">
+        <svg class="card-crest" viewBox="0 0 240 44" aria-hidden="true">
+          <use href="#sprig" />
+        </svg>
+        <p class="bismillah" lang="ar" dir="rtl">
+          بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+        </p>
+        <p class="label">With the blessings of Allah</p>
+        <p class="curtain-host">Almas Mohd Usman Khan Addewale</p>
+        <p class="curtain-subtitle">invites you to celebrate the Nikah Reception of</p>
+        <h1 class="curtain-names">Zunera <span class="amp">&</span> Maaz</h1>
+        <button class="open-button" id="openInvitation" type="button">
+          Open Invitation
+        </button>
+        <p class="tap-note">Tap to open the doors</p>
+      </div>
+    </div>
+
+    <main id="invitation">
+      <!-- ========================== HERO ========================== -->
+      <header class="hero section-shell">
+        <svg class="toran toran-hero" aria-hidden="true" focusable="false">
+          <rect width="100%" height="100%" fill="url(#toranPattern)" />
+        </svg>
+
+        <div class="hero-frame">
+          <svg
+            class="frame-crest frame-crest-top"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <use href="#bloom" />
+          </svg>
+          <svg
+            class="frame-crest frame-crest-bottom"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <use href="#bloom" />
+          </svg>
+
+          <p class="hero-bismillah reveal" lang="ar" dir="rtl">
+            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+          </p>
+          <p class="label reveal">You are cordially invited to the</p>
+          <p class="event-word reveal">Nikah</p>
+          <p class="invite-line reveal">Reception of</p>
+
+          <div class="ornament-divider reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#bloom" />
+            </svg>
+          </div>
+
+          <!-- ====== COUPLE & GUARDIANS: replace the placeholder parent names ====== -->
+          <h1 class="hero-names reveal">
+            <span class="couple">
+              <span class="name">Zunera</span>
+              <span class="parents"
+                >(D/o. Mrs. Almas Usman)</span
+              >
+            </span>
+            <span class="amp">&amp;</span>
+            <span class="couple">
+              <span class="name">Maaz</span>
+              <span class="parents"
+                >(S/o. Mr. Yusuf Shaikh)</span
+              >
+            </span>
+          </h1>
+
+          <div class="ornament-divider reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#bloom" />
+            </svg>
+          </div>
+          <p class="label reveal">With the Best Compliments from Family & Friends</p>
+          <!-- <p class="hero-date reveal" data-wedding-date>DATE TO BE ANNOUNCED</p> -->
+          <!-- <p class="hero-venue reveal" data-wedding-venue>
+            Wedding venue goes here · City
+          </p> -->
+        </div>
+        <a
+          class="scroll-cue"
+          href="#blessing"
+          aria-label="Scroll to invitation details"
+          >↓</a
+        >
+      </header>
+
+      <div class="section-divider" aria-hidden="true">
+        <svg viewBox="0 0 240 44"><use href="#sprig" /></svg>
+      </div>
+
+      <!-- ======================== BLESSING ======================== -->
+      <section class="blessing section-shell" id="blessing">
+        <div class="section-inner reveal">
+          <p class="arabic-quote" lang="ar" dir="rtl">
+            وَخَلَقْنَاكُمْ أَزْوَاجًا
+          </p>
+          <p class="quote-translation">“And We created you in pairs”</p>
+          <p class="reference">Al Qur’an 78:8</p>
+          <div class="ornament-divider">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#bloom" />
+            </svg>
+          </div>
+          <p class="dua" lang="ar" dir="rtl">
+            بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي
+            خَيْرٍ
+          </p>
+          <p class="dua-translation">
+            May Allah bless you, shower His blessings upon you, and join you
+            together in goodness. Aameen.
+          </p>
+          <p class="reference">— Sunan Abi Dawood</p>
+        </div>
+      </section>
+
+      <div class="section-divider" aria-hidden="true">
+        <svg viewBox="0 0 240 44"><use href="#sprig" /></svg>
+      </div>
+
+      <!-- ========================= NIKAH ========================= -->
+      <section
+        class="details section-shell event-section wedding-section"
+        id="wedding"
+      >
+        <div class="section-heading reveal">
+          <p class="label">The first beautiful milestone</p>
+          <h2>The Nikah</h2>
+          <p class="section-intro">A day of duas, love, and a new beginning.</p>
+        </div>
+        <div class="card-wrap">
+          <article class="detail-card reveal">
+            <svg class="card-crest" viewBox="0 0 240 44" aria-hidden="true">
+              <use href="#sprig" />
+            </svg>
+            <p class="label">Save the date</p>
+            <h3>Wedding Reception</h3>
+            <p class="detail-date" data-wedding-date>DATE TO BE ANNOUNCED</p>
+            <p class="detail-time" data-wedding-time>Time to be announced</p>
+            <div class="thin-rule"></div>
+            <p class="detail-venue" data-wedding-venue>
+              Wedding venue goes here · City
+            </p>
+            <a
+              class="text-link"
+              id="weddingMap"
+              href="https://maps.google.com/"
+              target="_blank"
+              rel="noreferrer"
+              >View venue map ↗</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <div class="section-divider" aria-hidden="true">
+        <svg viewBox="0 0 240 44"><use href="#sprig" /></svg>
+      </div>
+
+      <!-- =================== NIKAH COUNTDOWN =================== -->
+      <section
+        class="countdown-section section-shell wedding-countdown-section"
+        id="wedding-countdown-section"
+      >
+        <div class="section-heading reveal">
+          <p class="label">Counting down to forever</p>
+          <h2>Until the Nikah</h2>
+          <p class="section-intro">
+            Every moment brings us closer to this blessed day.
+          </p>
+        </div>
+        <div class="card-wrap">
+          <article class="countdown-card reveal">
+            <p class="label">Zunera &amp; Maaz · Wedding Reception</p>
+            <div class="timer" id="weddingCountdown" aria-live="polite">
+              <span><b>--</b><small>Days</small></span
+              ><span><b>--</b><small>Hours</small></span
+              ><span><b>--</b><small>Mins</small></span
+              ><span><b>--</b><small>Secs</small></span>
+            </div>
+            <p class="countdown-date" data-wedding-date>DATE TO BE ANNOUNCED</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="section-divider" aria-hidden="true">
+        <svg viewBox="0 0 240 44"><use href="#sprig" /></svg>
+      </div>
+
+      <!-- ======================= RECEPTION ======================= -->
+      <!-- <section
+        class="details section-shell event-section reception-section"
+        id="reception"
+      >
+        <div class="section-heading reveal">
+          <p class="label">The celebration continues</p>
+          <h2>The Reception</h2>
+          <p class="section-intro">
+            An evening to gather, celebrate, and make memories.
+          </p>
+        </div>
+        <div class="card-wrap">
+          <article class="detail-card reveal">
+            <svg class="card-crest" viewBox="0 0 240 44" aria-hidden="true">
+              <use href="#sprig" />
+            </svg>
+            <p class="label">Celebrate with us</p>
+            <h3>Reception</h3>
+            <p class="detail-date" data-reception-date>DATE TO BE ANNOUNCED</p>
+            <p class="detail-time" data-reception-time>Time to be announced</p>
+            <div class="thin-rule"></div>
+            <p class="detail-venue" data-reception-venue>
+              Reception venue goes here · City
+            </p>
+            <a
+              class="text-link"
+              id="receptionMap"
+              href="https://maps.google.com/"
+              target="_blank"
+              rel="noreferrer"
+              >View venue map ↗</a
+            >
+          </article>
+        </div>
+      </section> -->
+
+      <!-- <div class="section-divider" aria-hidden="true">
+        <svg viewBox="0 0 240 44"><use href="#sprig" /></svg>
+      </div> -->
+
+      <!-- ================= RECEPTION COUNTDOWN ================= -->
+      <!-- <section
+        class="countdown-section section-shell reception-countdown-section"
+        id="reception-countdown-section"
+      >
+        <div class="section-heading reveal">
+          <p class="label">The next joyful moment</p>
+          <h2>Until the Reception</h2>
+          <p class="section-intro">
+            We look forward to celebrating this special evening with you.
+          </p>
+        </div>
+        <div class="card-wrap">
+          <article class="countdown-card reveal">
+            <p class="label">Zunera &amp; Maaz · Reception</p>
+            <div class="timer" id="receptionCountdown" aria-live="polite">
+              <span><b>--</b><small>Days</small></span
+              ><span><b>--</b><small>Hours</small></span
+              ><span><b>--</b><small>Mins</small></span
+              ><span><b>--</b><small>Secs</small></span>
+            </div>
+            <p class="countdown-date" data-reception-date>
+              DATE TO BE ANNOUNCED
+            </p>
+          </article>
+        </div>
+      </section> -->
+
+      <!-- <div class="section-divider" aria-hidden="true">
+        <svg viewBox="0 0 240 44"><use href="#sprig" /></svg>
+      </div> -->
+
+      <!-- ======================== CLOSING ======================== -->
+      <section class="closing section-shell">
+        <div class="closing-frame reveal">
+          <p class="label">Your presence is our present</p>
+          <h2>With love &amp; duas</h2>
+          <p class="closing-text">
+            May Allah make this new chapter full of mercy, joy, and barakah.
+          </p>
+          <svg class="closing-sprig" viewBox="0 0 240 44" aria-hidden="true">
+            <use href="#sprig" />
+          </svg>
+          <p class="signature">Zunera &amp; Maaz</p>
+          <button class="back-to-top" id="backToTop" type="button">
+            Back to the beginning ↑
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
